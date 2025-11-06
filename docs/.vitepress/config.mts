@@ -6,6 +6,11 @@ export default defineConfig({
   title: "阿鲁米ARUMI",
   description: "A VitePress Site",
   themeConfig: {
+      outline: {
+			// level: [2,4], // 显示2-4级标题
+			level: 'deep', // 默认显示2-6级标题
+			label: '内容导航', // 大纲的标题
+		},
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
@@ -14,13 +19,69 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '铝型材DIY玩家手册',
+        text: '入门',
+        collapsed: false,
         items: [
           { text: '基础知识', link: '/markdown-examples' },
           { text: '连接方式', link: '/markdown-examples' },
           { text: 'DIY工具', link: '/markdown-examples' },
           { text: '配件库', link: '/markdown-examples' },
           { text: '技巧', link: '/markdown-examples' },
+          { text: '参考资料', link: '/markdown-examples' },
+          { text: '案例分享', link: '/api-examples' }
+        ]
+      },
+      {
+        text: '认识铝型材',
+        collapsed: false,
+        items: [
+          { text: '基础知识', link: '/markdown-examples' },
+          { text: '连接方式', link: '/markdown-examples' },
+          { text: 'DIY工具', link: '/markdown-examples' },
+          { text: '配件库', link: '/markdown-examples' },
+          { text: '技巧', link: '/markdown-examples' },
+          { text: '参考资料', link: '/markdown-examples' },
+          { text: '案例分享', link: '/api-examples' }
+        ]
+      },
+      {
+        text: '连接方式',
+        collapsed: false,
+        items: [
+          { text: '基础知识', link: '/markdown-examples' },
+          { text: '连接方式', link: '/markdown-examples' },
+          { text: 'DIY工具', link: '/markdown-examples' },
+          { text: '配件库', link: '/markdown-examples' },
+          { text: '技巧', link: '/markdown-examples' },
+          { text: '参考资料', link: '/markdown-examples' },
+          { text: '案例分享', link: '/api-examples' }
+        ]
+      },
+      {
+        text: '工具',
+        collapsed: false,
+        items: [
+          { text: '基础知识', link: '/markdown-examples' },
+          { text: '连接方式', link: '/markdown-examples' },
+          { text: 'DIY工具', link: '/markdown-examples' },
+          { text: '配件库', link: '/markdown-examples' },
+          { text: '技巧', link: '/markdown-examples' },
+          { text: '参考资料', link: '/markdown-examples' },
+          { text: '案例分享', link: '/api-examples' }
+        ]
+      },
+      {
+        text: '技巧',
+        collapsed: false,
+        items: [
+          { text: '参考资料', link: '/markdown-examples' },
+          { text: '案例分享', link: '/api-examples' }
+        ]
+      },
+      {
+        text: '案例',
+        collapsed: false,
+        items: [
           { text: '参考资料', link: '/markdown-examples' },
           { text: '案例分享', link: '/api-examples' }
         ]
@@ -57,5 +118,6 @@ export default defineConfig({
         }
       }         
     },
-  }
-})
+}
+}
+)
